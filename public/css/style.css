@@ -1,0 +1,121 @@
+:root{
+    --gray: #5c5c5c;
+    --cream: #f5f5f5;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--cream);
+    font-family: "lato", sans-serif;
+
+}
+
+#app{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+h1{
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    margin-bottom: 50px ;
+    font-size: 45px;
+    color: var(--gray);
+    font-weight: 300;
+
+}
+
+form{
+    text-align: center;
+}
+
+input{
+    width: 60%;
+    height: 40px;
+    color: var(--gray);
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    padding: 0 24px;
+    margin-right: 10px;
+}
+
+.btn_add{
+    width: 30%;
+    height: 40px;
+     border: 1px solid #dcdce6;
+     border-radius: 8px;
+     background-color: #59a2ad;
+     color: #fff;
+     cursor: pointer;
+}
+
+.btn_add:hover{
+    opacity: 0.9;
+}
+
+p{
+    font-family: "Dancing Script", cursive;
+    text-align: center; 
+    margin-top: 30px;
+    color: var(--gray);
+    font-size: 30px;
+}
+
+ul{
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin:20px 0;
+    list-style: none;
+    
+}
+
+ul li{
+    color: var(--gray);
+    padding:10px;
+    margin:10px 0;
+    border: none;
+    border-radius: 5px;
+    font-family: "lato", sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+    
+}
+.edit-btn{
+    display: flex;
+    flex-direction: row;
+}
+
+ul li a {
+    text-decoration: none;
+    margin:0 10px;
+    color: white;
+    cursor: pointer;
+    
+
+}
+
+ul li a:hover{
+    opacity: 0.8;
+}
+
