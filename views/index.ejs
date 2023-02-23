@@ -12,20 +12,22 @@
     <div id="app"> 
       <h1>to do list</h1>
       <ul class="todo-list">
+        <% task.forEach(elem =>{ %>
         <li class="todo-list-item">
-          <div class="todo-list-item-name">Some Text</div>
+          <div class="todo-list-item-name"><%= elem.task %></div>
           <div class="edit-btn">
-            <a href="" class="edit">
+            <a href="/edit/<%= elem._id %>" class="a edit">
               <span class="fas fa-edit"></span>
             </a>
-            <a href="" class="remove">
+            <a href="/remove/<%= elem._id %>" class="a remove">
               <span class="fas fa-times"></span>
             </a>
           </div>
         </li>
+        <% }) %>
       </ul>
       <form action="/" method="post">
-        <input type="text" name="input" id="" placeholder="New task">
+        <input type="text" name="task" id="inputfield" placeholder="New task">
         <button class="btn_add">Add</button>
       </form>
       <p>Insert a new task</p>

@@ -1,7 +1,7 @@
 const express = require("express")
+const controller = require("./controllers/to-do.controller")
 require("dotenv").config()
-
-
+require('./db').connectToMongoDB()
 
 
 
@@ -14,13 +14,15 @@ app.use("/static", express.static("public"))
 
 app.use(express.urlencoded({extended: true}))
 
-app.get("/",(req,res)=>{
-    res.render("index.ejs")
-})
+app.get("/", controller.getMainPage)
 
-app.post("/",(req, res)=>{
-    console.log(req.body)
-})
+app.post("/", controller.mainPost)
+
+app.get("/edit/:id", controller.getEditPage)
+
+app.post("/edit/:id", controller.postEdit)
+
+app.get("/remove/:id", controller.deleteTask)
 
 const PORT = process.env.PORT
 

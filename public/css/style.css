@@ -106,7 +106,7 @@ ul li{
     flex-direction: row;
 }
 
-ul li a {
+ul li .a {
     text-decoration: none;
     margin:0 10px;
     color: white;
@@ -117,5 +117,42 @@ ul li a {
 
 ul li a:hover{
     opacity: 0.8;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.confirm-btn{
+    font-size: small;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    background-color: #59a2ad;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.confirm-btn:hover{
+    opacity: 0.8;
+}
+
+.cancel-btn{
+    text-decoration: none;
+    font-size: small;
+    padding: 5px;
+    border: 1px solid #dcdce6;
+    border-radius: 8px;
+    background-color: #59a2ad;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
