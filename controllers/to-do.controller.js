@@ -57,6 +57,26 @@ async function deleteTask(req,res){
     }
 }
 
+function exitPage(req,res){
+    try{
+        res.render("exit.ejs")
+    }catch(error){
+        console.log(error)
+    }
+
+}
+
+function profilePage(req,res){
+    try{
+        console.log(req.oidc.user)
+        res.render("profile.ejs",{user: req.oidc.user})
+
+    }catch(error){
+        console.log(error)
+        res.render("profile.ejs")
+    }
+}
+
 module.exports = {
-    getMainPage,mainPost,deleteTask,getEditPage,postEdit
+    getMainPage,mainPost,deleteTask,getEditPage,postEdit,exitPage,profilePage
 }
