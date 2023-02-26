@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="/static/css/style.css">
   </head>
   <body>
+
+    <div class="user-profile">
+        <% if (user){ %>
+  
+        <div class="user-image"><img src="<%= user.picture %>" alt="<%= user.nickname%>"></div>
+        <a href="/profile" class="profile-btn">profile</a>
+        <% } %>
+    </div>
+
     <div id="app"> 
       <h1>to do list</h1>
       <ul class="todo-list">
@@ -19,7 +28,7 @@
                 <input type="text" value="<%= elem.task %>" name="task" id="inputfield">
                 <div class="edit-btn">
                     <button type="submit" class="confirm-btn">Confirm</button>
-                    <a href="/" class="cancel-btn">Cancel</a>
+                    <a href="/main" class="cancel-btn">Cancel</a>
                 </div>
             </form>
         </li>

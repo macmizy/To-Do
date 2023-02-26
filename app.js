@@ -18,30 +18,21 @@ app.use(express.urlencoded({extended: true}))
 
 app.use(auth0Middleware)
 
-app.get("/", controller.getMainPage)
+app.get("/main", controller.getMainPage)
 
-app.get("/callbacks/",(req,res)=>{
-
-   try {
-        res.redirect("/")
-
-   } catch (error) {
-        console.log(error)
-   } 
-    
-})
+app.get("/callback", controller.callback)
 
 app.get("/profile",requiresAuth(), controller.profilePage)
 
 app.post("/", controller.mainPost)
 
-app.get("/edit/:id", controller.getEditPage)
+app.get("/edit/:id",requiresAuth(), controller.getEditPage)
 
 app.post("/edit/:id", controller.postEdit)
 
-app.get("/remove/:id", controller.deleteTask)
+app.get("/remove/:id",requiresAuth(), controller.deleteTask)
 
-app.get("/exit", controller.exitPage)
+app.get("/exit",requiresAuth(), controller.exitPage)
 
 const PORT = process.env.PORT
 

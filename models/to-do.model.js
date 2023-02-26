@@ -10,6 +10,9 @@ required: true
 date: {
 type: Date,
 default: Date.now
+},
+userId: {
+    type: String,
 }
 })
 const todoModel = mongoose.model('Todo',todoSchema);

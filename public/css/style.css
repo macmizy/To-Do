@@ -14,13 +14,18 @@
 body{
     width: 100vw;
     height: 100vh;
+    padding-top: 20px;
     display: flex;
-    justify-content: center;
+    gap: 20vh;
     align-items: center;
     flex-direction: column;
-    background-color: var(--cream);
+    background-color: #f5f5f5;
     font-family: "lato", sans-serif;
 
+}
+
+.snd-body{
+    justify-content: center;
 }
 
 #app{
@@ -36,7 +41,7 @@ h1{
     text-align: center;
     margin-bottom: 50px ;
     font-size: 45px;
-    color: var(--gray);
+    color: #5c5c5c;
     font-weight: 300;
 
 }
@@ -48,7 +53,7 @@ form{
 input{
     width: 60%;
     height: 40px;
-    color: var(--gray);
+    color: #5c5c5c;
     border: 1px solid #dcdce6;
     border-radius: 8px;
     padding: 0 24px;
@@ -73,7 +78,7 @@ p{
     font-family: "Dancing Script", cursive;
     text-align: center; 
     margin-top: 30px;
-    color: var(--gray);
+    color: #5c5c5c;
     font-size: 30px;
 }
 
@@ -87,7 +92,7 @@ ul{
 }
 
 ul li{
-    color: var(--gray);
+    color: #5c5c5c;
     padding:10px;
     margin:10px 0;
     border: none;
@@ -159,3 +164,27 @@ ul li a:hover{
     justify-content: center;
     align-items: center;
 }
+
+.user-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: flex-end;
+    align-items: center;
+    margin: 10px;
+}
+
+.user-image{
+    border-radius: 50%;
+    border: 1px solid #59a2ad;
+    width: 40%;
+    height: 40%;
+}
+
+.user-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+
