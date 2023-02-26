@@ -20,7 +20,7 @@ app.use(auth0Middleware)
 
 app.get("/main", controller.getMainPage)
 
-app.get("/callback/", controller.callback)
+app.get("/call", controller.callback)
 
 app.get("/profile",requiresAuth(), controller.profilePage)
 
@@ -32,7 +32,7 @@ app.post("/edit/:id", controller.postEdit)
 
 app.get("/remove/:id",requiresAuth(), controller.deleteTask)
 
-app.get("/exit/",requiresAuth(), controller.exitPage)
+app.get("/exit",requiresAuth(), controller.exitPage)
 
 const PORT = process.env.PORT
 
