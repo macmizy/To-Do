@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +15,13 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-openid-connect": "^2.12.0",
+    "express-rate-limit": "^6.7.0",
     "express-session": "^1.17.3",
-    "mongoose": "^6.9.2"
+    "helmet": "^6.0.1",
+    "mongoose": "^6.9.2",
+    "morgan": "^1.10.0",
+    "morgan-json": "^1.1.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
