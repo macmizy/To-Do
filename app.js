@@ -4,7 +4,6 @@ const { requiresAuth } = require('express-openid-connect');
 const auth0Middleware = require("./auth/auth0")
 const rateLimit = require('express-rate-limit')
 const helmet = require("helmet")
-const logger = require('./logger/logger')
 require("dotenv").config()
 require('./db').connectToMongoDB()
 
@@ -21,7 +20,11 @@ const limiter = rateLimit({
 })
 app.use(limiter)
 
-app.use(helmet());
+app.use(
+    helmet({
+      contentSecurityPolicy: false,
+    })
+  );
 
 app.set("view engine", "ejs")
 app.set('views','views')
