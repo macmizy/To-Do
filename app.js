@@ -23,6 +23,7 @@ app.use(limiter)
 app.use(
     helmet({
       contentSecurityPolicy: false,
+      crossOriginEmbedderPolicy: false,
     })
   );
 
