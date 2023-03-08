@@ -7,7 +7,7 @@ const config = {
     secret: process.env.SECRET_KEY,
     baseURL: process.env.baseURL,
     clientID: process.env.clientID,
-    issuerBaseURL: process.env.issuerBaseURL
+    issuerBaseURL: process.env.issuerBaseURL,
   };
 
   module.exports = auth(config)
